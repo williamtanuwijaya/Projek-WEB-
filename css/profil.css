@@ -59,9 +59,12 @@
 }
 
 .form-container .social-button.apple {
-  background-color: #212121;
+  background-color: #000000;
 }
-
+.form-container .social-button.google {
+  color: black;
+  background-color: #ffffff;
+}
 .form-container .form {
   display: flex;
   flex-direction: column;
