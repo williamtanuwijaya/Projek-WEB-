@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil Tokeko</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/profil.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
     <div>
@@ -20,7 +24,7 @@
         </ul>
       </nav>
     </div>
-    <div class="container content" style="position: absolute; left: 50%; top: 47%; transform: translate(-50%, -50%); margin-left: 387px">
+    <div class="container content animated fadeInUp" style="position: absolute; left: 42%; transform: translate(-50%, -50%); margin-top: -15px;">
       <div class="text-center">
         <div class="form-container">
           <div class="logo-container">Welcome Back!</div>
@@ -82,7 +86,11 @@
     <footer>
       <div class="container text-center">&copy; 2023 Tokeko. All rights reserved.</div>
     </footer>
-
+    <div class="mode-buttons">
+      <button id="darkModeButton" class="btn btn-dark" style="border-color: rgba(255, 255, 255, 0.9);">Dark Mode</button>
+      <button id="lightModeButton" class="btn btn-dark" style="border-color: rgba(255, 255, 255, 0.9);">Light Mode</button>
+    </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../mode.js"></script>
   </body>
 </html>
