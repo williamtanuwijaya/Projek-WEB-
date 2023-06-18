@@ -4,6 +4,8 @@
     <title>Contact Tokeko</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="icon" href="./assets/LOGO/icon.png" />
+    <link rel="stylesheet" href="../css/contact.css">
   </head>
   <body>
     <div>
@@ -21,13 +23,17 @@
     </div>
     <div class="container content">
       <div class="text-center">
-        <h2>CONTACT</h2>
+        <h2 class="animate" style="animation: fade 1.5s ease-in-out infinite alternate">CONTACT</h2>
       </div>
     </div>
     <footer>
       <div class="container text-center">&copy; 2023 Tokeko. All rights reserved.</div>
     </footer>
-
+    <div class="mode-buttons">
+      <button id="darkModeButton" class="btn btn-dark" style="border-color: rgba(255, 255, 255, 0.9)">Dark Mode</button>
+      <button id="lightModeButton" class="btn btn-dark" style="border-color: rgba(255, 255, 255, 0.9)">Light Mode</button>
+    </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../mode.js"></script>
   </body>
 </html>
