@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./css/animation.css">
-    <link rel="icon" href="./assets/LOGO/icon.png">
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="icon" href="./assets/LOGO/icon.png" />
+    <link rel="stylesheet" href="./css/button_switch.css">
   </head>
   <body>
     <div>
@@ -16,9 +17,9 @@
       <nav class="navbar navbar-expand-lg bg-light">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/produk.html" target="_blank">Produk</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/profil.html" target="_blank">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/contact.html" target="_blank">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="./temp/produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="./temp/profil.html">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="./temp/contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -31,10 +32,10 @@
     <footer>
       <div class="container text-center">&copy; 2023 Tokeko. All rights reserved.</div>
     </footer>
-    <div class="mode-buttons">
-      <button id="darkModeButton" class="btn btn-dark" style="border-color: rgba(255, 255, 255, 0.9);">Dark Mode</button>
-      <button id="lightModeButton" class="btn btn-dark" style="border-color: rgba(255, 255, 255, 0.9);">Light Mode</button>
-    </div>
+    <label class="switch" for="darkModeCheckbox">
+      <input type="checkbox" id="darkModeCheckbox" />
+      <span class="slider"></span>
+    </label>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./mode.js"></script>
   </body>
