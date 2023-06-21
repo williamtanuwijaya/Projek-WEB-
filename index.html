@@ -2,12 +2,18 @@
 <html>
   <head>
     <title>TOKEKO</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="icon" href="./assets/LOGO/icon.png" />
-    <link rel="stylesheet" href="./css/button_switch.css">
+    <link rel="stylesheet" href="./css/button_switch.css" />
   </head>
   <body>
     <div>
@@ -16,21 +22,54 @@
       </header>
       <nav class="navbar navbar-expand-lg bg-light">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/produk.html">Produk</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/profil.html">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <!-- <li class="toggle">
+            <a class="nav-link" href="./temp/produk.html">Produk</a>
+            <input type="checkbox" />
+            <ul>
+              <li><a href="#">Adidas</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Puma</a></li>
+            </ul>
+          </li> -->
+
+          <li>
+            <!-- Second Tier Drop Down -->
+            <label for="drop-3" class="toggle">Produk</label>
+            <a href="./temp/produk.html">Produk</a>
+            <input type="checkbox" id="drop-3" />
+
+            <ul id="dropdown">
+              <li><a href="#">adidas</a></li>
+              <li><a href="#">Nike</a></li>
+              <li><a href="#">Puma</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./temp/profil.html">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./temp/contact.html">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
     <div class="container content animated fadeInUp">
       <div class="text-center">
         <h2>Selamat Datang di Tokeko!</h2>
-        <p>Silakan jelajahi produk-produk berkualitas kami, temukan informasi profil kami, dan hubungi kami jika Anda memiliki pertanyaan.</p>
+        <p>
+          Silakan jelajahi produk-produk berkualitas kami, temukan informasi
+          profil kami, dan hubungi kami jika Anda memiliki pertanyaan.
+        </p>
       </div>
     </div>
     <footer>
-      <div class="container text-center">&copy; 2023 Tokeko. All rights reserved.</div>
+      <div class="container text-center">
+        &copy; 2023 Tokeko. All rights reserved.
+      </div>
     </footer>
     <label class="switch" for="darkModeCheckbox">
       <input type="checkbox" id="darkModeCheckbox" />
