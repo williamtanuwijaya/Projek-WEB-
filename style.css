@@ -1,11 +1,9 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-weight: bold;
-}
-header{
+    font-family: Arial, Helvetica, sans-serif;
     background: #333;
+    font-weight: bold;
 }
 nav{
     color: #fff;
@@ -156,7 +154,7 @@ header::after{
     max-width: 45em;
 }
 
-.btn{
+#btn{
     padding: 0.7em 1.5em;
     background: #a3be52;
     border-radius: 3em;
@@ -165,7 +163,7 @@ header::after{
     transition: 0.3s;
 }
 
-.btn:hover{
+#btn:hover{
     background: #6e9623;
 }
 
