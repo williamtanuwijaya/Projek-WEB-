@@ -1,21 +1,21 @@
 // Simpan transaksi yang dipilih
-var transactions = [];
+let transactions = [];
 
 // Ambil elemen-elemen yang diperlukan
-var addToCartButtons = document.querySelectorAll('.add-to-cart');
-var transactionItems = document.getElementById('transaction-items');
-var transactionTotal = document.querySelector('.transaction-total');
+let addToCartButtons = document.querySelectorAll('.add-to-cart');
+let transactionItems = document.getElementById('transaction-items');
+let transactionTotal = document.querySelector('.transaction-total');
 let transactionPajak = document.querySelector('pajak');
 
 // Tambahkan event listener untuk tombol "Tambahkan ke Keranjang"
 addToCartButtons.forEach(function(button) {
   button.addEventListener('click', function() {
-    var card = this.closest('.card');
-    var title = card.querySelector('.card-title').innerText;
-    var price = parseFloat(card.querySelector('.card-price').innerText.replace('Harga: $', ''));
+    let card = this.closest('.card');
+    let title = card.querySelector('.card-title').innerText;
+    let price = parseFloat(card.querySelector('.card-price').innerText.replace('Harga: $', ''));
     
     // Cek apakah transaksi sudah ada dalam daftar
-    var existingTransaction = transactions.find(function(transaction) {
+    let existingTransaction = transactions.find(function(transaction) {
       return transaction.title === title;
     });
 
@@ -25,7 +25,7 @@ addToCartButtons.forEach(function(button) {
       existingTransaction.total = existingTransaction.quantity * price;
     } else {
       // Jika belum ada, buat transaksi baru
-      var newTransaction = {
+      let newTransaction = {
         title: title,
         quantity: 1,
         price: price,
@@ -42,19 +42,19 @@ addToCartButtons.forEach(function(button) {
 // Render tampilan transaksi
 function renderTransactions() {
   transactionItems.innerHTML = '';
-  var total = 0;
+  let total = 0;
 
   transactions.forEach(function(transaction) {
-    var itemText = transaction.title + ' - $' + transaction.price.toFixed(2) + ' x ' + transaction.quantity;
-    var itemTotal = transaction.total.toFixed(2);
+    let itemText = transaction.title + ' - $' + transaction.price.toFixed(2) + ' x ' + transaction.quantity;
+    let itemTotal = transaction.total.toFixed(2);
     total += transaction.total;
     
-    var itemElement = document.createElement('div');
+    let itemElement = document.createElement('div');
     itemElement.classList.add('transaction-item');
     itemElement.innerText = itemText + ' = $' + itemTotal;
     transactionItems.appendChild(itemElement);
   });
 
-  var totalWithTax = total * 1.1; // Harga total dengan pajak 10%
+  let totalWithTax = total * 1.1; // Harga total dengan pajak 10%
   transactionTotal.innerText = 'Total: $' + totalWithTax.toFixed(2);
 }
