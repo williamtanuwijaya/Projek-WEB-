@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="icon" href="./assets/LOGO/icon.png" />
-    <link rel="stylesheet" href="./css/button_switch.css">
+    <link rel="stylesheet" href="./css/button_switch.css" />
   </head>
   <body>
     <div>
@@ -16,10 +16,27 @@
       </header>
       <nav class="navbar navbar-expand-lg bg-light">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/produk.html">Produk</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/profil.html">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="./temp/contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li>
+            <label for="drop-3" class="toggle">Produk</label>
+            <a>Produk</a>
+            <input type="checkbox" id="drop-3" />
+
+            <ul id="dropdown">
+              <li><a href="./temp/produk.html#Adidas">Adidas</a></li>
+              <li><a href="./temp/produk.html#nike">Nike</a></li>
+              <li><a href="#">Puma</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./temp/profil.html">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./temp/contact.html">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -30,7 +47,7 @@
       </div>
     </div>
     <footer>
-      <div class="container text-center">&copy; 2023 Tokeko. All rights reserved.</div>
+      <div class="container text-center">&copy; copy right 2023 - Tokeko :)</div>
     </footer>
     <label class="switch" for="darkModeCheckbox">
       <input type="checkbox" id="darkModeCheckbox" />
