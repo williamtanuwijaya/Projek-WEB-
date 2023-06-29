@@ -1,8 +1,13 @@
-footer{
-    height: 50px;
+.footer2 {
+    bottom: 0;
+    left: 0;
     width: 100%;
-    background: black;
+    background-color: #273036;
     color: white;
     text-align: center;
-    border-bottom-color: white;
-}
+    padding: 20px;
+  }
+
+  .footer2 footer {
+    font-size: 14px;
+  }
