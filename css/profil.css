@@ -1,0 +1,63 @@
+#daftar-profil {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profil {
+  text-align: center;
+  margin: 20px;
+}
+
+.foto-profil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.foto-profil:hover {
+  transform: scale(1.1);
+}
+
+.nama {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.deskripsi {
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.sosial-media {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.sosial-media li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.sosial-media a {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.facebook a:hover {
+  color: #17A9FD;
+}
+
+.instagram a:hover {
+  color: #C13584;
+}
+
+.linkedin a:hover {
+  color: #0A66C2;
+}

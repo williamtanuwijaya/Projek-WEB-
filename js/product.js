@@ -12,7 +12,7 @@ addToCartButtons.forEach(function(button) {
   button.addEventListener('click', function() {
     let card = this.closest('.card');
     let title = card.querySelector('.card-title').innerText;
-    let price = parseFloat(card.querySelector('.card-price').innerText.replace('Harga: $', ''));
+    let price = parseFloat(card.querySelector('.card-price').innerText.replace('Harga: Rp ', ''));
     
     // Cek apakah transaksi sudah ada dalam daftar
     let existingTransaction = transactions.find(function(transaction) {
@@ -45,16 +45,16 @@ function renderTransactions() {
   let total = 0;
 
   transactions.forEach(function(transaction) {
-    let itemText = transaction.title + ' - $' + transaction.price.toFixed(2) + ' x ' + transaction.quantity;
+    let itemText = transaction.title + ' - Rp ' + transaction.price.toFixed(2) + ' x ' + transaction.quantity;
     let itemTotal = transaction.total.toFixed(2);
     total += transaction.total;
     
     let itemElement = document.createElement('div');
     itemElement.classList.add('transaction-item');
-    itemElement.innerText = itemText + ' = $' + itemTotal;
+    itemElement.innerText = itemText + ' = Rp ' + itemTotal;
     transactionItems.appendChild(itemElement);
   });
 
   let totalWithTax = total * 1.1; // Harga total dengan pajak 10%
-  transactionTotal.innerText = 'Total: $' + totalWithTax.toFixed(2);
+  transactionTotal.innerText = 'Total: Rp ' + totalWithTax.toFixed(2);
 }
