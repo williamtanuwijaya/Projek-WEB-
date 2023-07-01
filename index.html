@@ -243,11 +243,10 @@
   </body>
 
     <script>
-
+    //PRIMARY KEY ID PRODUK
+    let idProduk = "00";
     //Tambah Produk
-
   document.addEventListener("DOMContentLoaded",function(){
-
   //tambahProduk(sourceImg,namaProduk,HargaProduk)
 
   tambahProduk("./assets/Jordan Series ES.jpg","Jordan Series ES","1.399.000",);
@@ -297,7 +296,10 @@
      let p = document.createElement("p");
      let buttonAddToCart = document.createElement("button");
 
-     //deklarasi nama class yang ada di boostrap
+     //GENERATE ID PRODUK
+     idProduk++;
+     divCard.setAttribute("id",idProduk);
+
      divCard.classList.add("card");
      divCardContent.classList.add("card-content");
      divCardTitle.classList.add("card-title");
