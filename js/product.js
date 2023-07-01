@@ -100,15 +100,14 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
       existingItem.hargaTotal = existingItem.jumlah * hargaProduk;
       document.getElementById('item-' + existingItem.id).textContent = `${existingItem.namaProduk} - ${existingItem.jumlah} barang - Rp ${existingItem.hargaTotal.toLocaleString('id-ID')}.00`;
     } else {
+      let idDetailTransaksi = cartItems.length + 1;
       let newCartItem = {
-        id: idProduk,
+        id: idDetailTransaksi,
         namaProduk: namaProduk,
         jumlah: 1,
         hargaTotal: hargaProduk,
       };
       cartItems.push(newCartItem);
-
-      let idDetailTransaksi = cartItems.length;
       let detailTransaksi = document.createElement('p');
       detailTransaksi.setAttribute('id', 'item-' + idDetailTransaksi);
       detailTransaksi.textContent = `${newCartItem.namaProduk} - ${newCartItem.jumlah} barang - Rp ${newCartItem.hargaTotal.toLocaleString('id-ID')}.00`;
@@ -128,5 +127,5 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
     transactionTotal.textContent = `Total : Rp. ${totalBayar.toLocaleString('id-ID')}.00`;
   });
 
-  buttonAddToCart.setAttribute('data-id', idProduk);
+  buttonAddToCart.setAttribute('data-id', idProduk);
 }
