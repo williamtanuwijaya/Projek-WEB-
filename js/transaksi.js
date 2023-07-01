@@ -1,3 +1,5 @@
+import { tambahProduk } from "./index";
+
 // Simpan transaksi yang dipilih
 let transactions = [];
 
@@ -5,17 +7,17 @@ let transactions = [];
 let addToCartButtons = document.querySelectorAll('.add-to-cart');
 let transactionItems = document.getElementById('transaction-items');
 let transactionTotal = document.querySelector('.transaction-total');
-let transactionPajak = document.querySelector('pajak');
+let transactionPajak = document.querySelector('.pajak'); // Corrected selector
 
 // Tambahkan event listener untuk tombol "Tambahkan ke Keranjang"
-addToCartButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
+addToCartButtons.forEach(function (button) {
+  button.addEventListener('click', function () {
     let card = this.closest('.card');
     let title = card.querySelector('.card-title').innerText;
-    let price = parseFloat(card.querySelector('.card-price').innerText.replace('Harga: Rp ', ''));
-    
+    let price = parseFloat(card.querySelector('.card-price').innerText.replace('Harga : Rp ', '')); // Corrected selector and text replacement
+
     // Cek apakah transaksi sudah ada dalam daftar
-    let existingTransaction = transactions.find(function(transaction) {
+    let existingTransaction = transactions.find(function (transaction) {
       return transaction.title === title;
     });
 
@@ -29,7 +31,7 @@ addToCartButtons.forEach(function(button) {
         title: title,
         quantity: 1,
         price: price,
-        total: price
+        total: price,
       };
       transactions.push(newTransaction);
     }
@@ -44,11 +46,11 @@ function renderTransactions() {
   transactionItems.innerHTML = '';
   let total = 0;
 
-  transactions.forEach(function(transaction) {
+  transactions.forEach(function (transaction) {
     let itemText = transaction.title + ' - Rp ' + transaction.price.toFixed(2) + ' x ' + transaction.quantity;
     let itemTotal = transaction.total.toFixed(2);
     total += transaction.total;
-    
+
     let itemElement = document.createElement('div');
     itemElement.classList.add('transaction-item');
     itemElement.innerText = itemText + ' = Rp ' + itemTotal;
@@ -58,3 +60,4 @@ function renderTransactions() {
   let totalWithTax = total * 1.1; // Harga total dengan pajak 10%
   transactionTotal.innerText = 'Total: Rp ' + totalWithTax.toFixed(2);
 }
+

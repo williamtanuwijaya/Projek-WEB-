@@ -1,3 +1,4 @@
+import { tambahProduk } from "./index";
 //Tambah Produk
 document.addEventListener('DOMContentLoaded', function () {
   //tambahProduk(sourceImg,namaProduk,HargaProduk)
@@ -33,53 +34,3 @@ document.addEventListener('DOMContentLoaded', function () {
   tambahProduk('../assets/Nike Air Max Plus 3.jpg', 'Nike Air Max Plus 3', '2.989.000');
   tambahProduk('../assets/Nike Air Presto.jpg', 'Nike Air Presto', '2.199.000');
 });
- function tambahProduk(sourceImg, namaProduk, HargaProduk) {
-  //Deklarasi document create element, yang di simpan di variabel
-  let divCard = document.createElement('div');
-  let divCardContent = document.createElement('div');
-  let divCardTitle = document.createElement('div');
-  let divCardPrice = document.createElement('div');
-  let imgCardImage = document.createElement('img');
-  let divCardOverlay = document.createElement('div');
-  let divCardOverLayContent = document.createElement('div');
-  let p = document.createElement('p');
-  let buttonAddToCart = document.createElement('button');
-
-  //deklarasi nama class yang ada di boostrap
-  divCard.classList.add('card');
-  divCardContent.classList.add('card-content');
-  divCardTitle.classList.add('card-title');
-  divCardPrice.classList.add('card-price');
-  imgCardImage.classList.add('card-image');
-  divCardOverlay.classList.add('card-overlay');
-  divCardOverLayContent.classList.add('card-overlay-content');
-  p.classList.add('OverlayKontent');
-  buttonAddToCart.classList.add('add-to-cart');
-
-  //inisialisasi text content
-  divCardTitle.textContent = namaProduk;
-  divCardPrice.textContent = 'Harga : Rp ' + HargaProduk;
-  p.textContent = namaProduk;
-  buttonAddToCart.textContent = 'Tambah ke keranjang';
-
-  //deklarasi atribut dari element yang dibuat
-  imgCardImage.setAttribute('src', sourceImg);
-  imgCardImage.setAttribute('alt', namaProduk);
-
-  //add child pada parent div atau parent elementnya
-
-  divCardOverLayContent.appendChild(p);
-  divCardOverLayContent.appendChild(buttonAddToCart);
-
-  divCardOverlay.appendChild(divCardOverLayContent);
-
-  divCardContent.appendChild(divCardTitle);
-  divCardContent.appendChild(divCardPrice);
-  divCardContent.appendChild(imgCardImage);
-
-  divCard.appendChild(divCardOverlay);
-  divCard.appendChild(divCardContent);
-
-  let container = document.getElementById('container');
-  container.appendChild(divCard);
-}
