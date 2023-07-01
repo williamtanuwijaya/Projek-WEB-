@@ -35,21 +35,22 @@ document.addEventListener('DOMContentLoaded', function () {
   tambahProduk('./assets/Nike Air Presto.jpg', 'Nike Air Presto', '2.199.000');
 });
 
+let cartItems = [];
+
 function tambahProduk(sourceImg, namaProduk, hargaProduk) {
-  // Deklarasi document create element, yang disimpan dalam variabel
   let divCard = document.createElement('div');
   let divCardContent = document.createElement('div');
   let divCardTitle = document.createElement('div');
   let divCardPrice = document.createElement('div');
   let imgCardImage = document.createElement('img');
   let divCardOverlay = document.createElement('div');
-  let divCardOverLayContent = document.createElement('div');
+  let divCardOverlayContent = document.createElement('div');
   let p = document.createElement('p');
   let buttonAddToCart = document.createElement('button');
 
-  // GENERATE ID PRODUK
-  idProduk++;
-  divCard.setAttribute('id', idProduk);
+  idProduk++; // Increment idProduk
+
+  divCard.setAttribute('id', 'produk-' + idProduk);
 
   divCard.classList.add('card');
   divCardContent.classList.add('card-content');
@@ -57,46 +58,60 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
   divCardPrice.classList.add('card-price');
   imgCardImage.classList.add('card-image');
   divCardOverlay.classList.add('card-overlay');
-  divCardOverLayContent.classList.add('card-overlay-content');
-  p.classList.add('OverlayKontent');
+  divCardOverlayContent.classList.add('card-overlay-content');
+  p.classList.add('overlay-content');
   buttonAddToCart.classList.add('add-to-cart');
-  let cartItems = [];
+
+  divCardTitle.textContent = namaProduk;
+  divCardPrice.textContent = 'Harga: Rp ' + hargaProduk;
+  p.textContent = namaProduk;
+  buttonAddToCart.textContent = 'Tambah ke keranjang';
+
+  imgCardImage.setAttribute('src', sourceImg);
+  imgCardImage.setAttribute('alt', namaProduk);
+
+  divCardOverlayContent.appendChild(p);
+  divCardOverlayContent.appendChild(buttonAddToCart);
+  divCardOverlay.appendChild(divCardOverlayContent);
+  divCardContent.appendChild(divCardTitle);
+  divCardContent.appendChild(divCardPrice);
+  divCardContent.appendChild(imgCardImage);
+  divCard.appendChild(divCardOverlay);
+  divCard.appendChild(divCardContent);
+
+  let container = document.getElementById('containers');
+  container.appendChild(divCard);
 
   buttonAddToCart.addEventListener('click', function () {
-    let idCard = divCard.id;
-    let namaProduk = document.getElementById(idCard).lastChild.firstChild.textContent;
-    let hargaProduk = document.getElementById(idCard).lastChild.childNodes[1].textContent;
+    let idCard = this.getAttribute('data-id');
+    let namaProduk = document.getElementById('produk-' + idCard).querySelector('.card-title').textContent;
+    let hargaProduk = document.getElementById('produk-' + idCard).querySelector('.card-price').textContent;
 
-    hargaProduk = hargaProduk.replace('Harga : Rp ', '');
-    hargaProduk = hargaProduk.replace('.', '');
-    hargaProduk = hargaProduk.replace('.', '');
+    hargaProduk = hargaProduk.replace('Harga: Rp ', '').replace(/\D/g, '');
     hargaProduk = parseFloat(hargaProduk);
 
     let divPajak = document.getElementById('pajak');
+    let transactionItems = document.getElementById('transaction-items');
 
-    // Detail Transaksi
-    let transaction_items = document.getElementById('transaction-items');
     let existingItem = cartItems.find((item) => item.namaProduk === namaProduk);
 
     if (existingItem) {
       existingItem.jumlah++;
       existingItem.hargaTotal = existingItem.jumlah * hargaProduk;
-      document.getElementById(existingItem.id).textContent = `${existingItem.namaProduk} - ${existingItem.jumlah} barang - Rp ${existingItem.hargaTotal}.00`;
+      document.getElementById('item-' + existingItem.id).textContent = `${existingItem.namaProduk} - ${existingItem.jumlah} barang - Rp ${existingItem.hargaTotal.toLocaleString('id-ID')}.00`;
     } else {
-      let idDetailTransaksi = cartItems.length + 1;
       let newCartItem = {
-        id: idDetailTransaksi,
+        id: idProduk,
         namaProduk: namaProduk,
         jumlah: 1,
         hargaTotal: hargaProduk,
       };
       cartItems.push(newCartItem);
 
+      let idDetailTransaksi = cartItems.length;
       let detailTransaksi = document.createElement('p');
-      detailTransaksi.setAttribute('id', idDetailTransaksi);
-      detailTransaksi.textContent = `${newCartItem.namaProduk} - ${newCartItem.jumlah} barang - Rp ${newCartItem.hargaTotal}.00`;
-
-      let transactionItems = document.getElementById('transaction-items');
+      detailTransaksi.setAttribute('id', 'item-' + idDetailTransaksi);
+      detailTransaksi.textContent = `${newCartItem.namaProduk} - ${newCartItem.jumlah} barang - Rp ${newCartItem.hargaTotal.toLocaleString('id-ID')}.00`;
       transactionItems.appendChild(detailTransaksi);
     }
 
@@ -106,37 +121,12 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
     });
 
     let pajak = (totalBayar * 10) / 100;
-    divPajak.textContent = `Pajak : Rp. ${pajak}.00`;
+    divPajak.textContent = `Pajak : Rp. ${pajak.toLocaleString('id-ID')}.00`;
     totalBayar += pajak;
 
-    // Total Bayar Transaksi
-    let transaction_total = document.getElementById('transaction-total');
-    transaction_total.textContent = `Total : Rp. ${totalBayar}.00`;
+    let transactionTotal = document.getElementById('transaction-total');
+    transactionTotal.textContent = `Total : Rp. ${totalBayar.toLocaleString('id-ID')}.00`;
   });
 
-  // Inisialisasi text content
-  divCardTitle.textContent = namaProduk;
-  divCardPrice.textContent = `Harga : Rp ${hargaProduk}`;
-  p.textContent = namaProduk;
-  buttonAddToCart.textContent = 'Tambah ke keranjang';
-
-  // Deklarasi atribut dari elemen yang dibuat
-  imgCardImage.setAttribute('src', sourceImg);
-  imgCardImage.setAttribute('alt', namaProduk);
-
-  // Menambahkan child pada parent div atau parent elemennya
-  divCardOverLayContent.appendChild(p);
-  divCardOverLayContent.appendChild(buttonAddToCart);
-
-  divCardOverlay.appendChild(divCardOverLayContent);
-
-  divCardContent.appendChild(divCardTitle);
-  divCardContent.appendChild(divCardPrice);
-  divCardContent.appendChild(imgCardImage);
-
-  divCard.appendChild(divCardOverlay);
-  divCard.appendChild(divCardContent);
-
-  let container = document.getElementById('containers');
-  container.appendChild(divCard);
+  buttonAddToCart.setAttribute('data-id', idProduk);
 }
