@@ -1,0 +1,23 @@
+.nav-btn {
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  top: -5px;
+  right: -9px;
+  background-color: red;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification p {
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  font-weight: bold;
+}
