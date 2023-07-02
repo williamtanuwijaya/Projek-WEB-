@@ -155,7 +155,7 @@ header::after {
   max-width: 45em;
 }
 
-#btn {
+#btnLogin {
   padding: 0.7em 1.5em;
   background: #a3be52;
   border-radius: 3em;
@@ -164,9 +164,24 @@ header::after {
   transition: 0.3s;
 }
 
-#btn:hover {
+#btnLogin:hover {
   background: #6e9623;
 }
+
+#btnRegis {
+  padding: 0.7em 1.5em;
+  background: #a3be52;
+  border-radius: 3em;
+  letter-spacing: 1px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+#btnRegis:hover {
+  background: #6e9623;
+}
+
+
 
 .body > div:nth-child(2) {
   display: flex;
