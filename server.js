@@ -6,6 +6,9 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+app.get('/', (req, res)=>{
+  res.render('index');
+});
 
 app.get('/contact', (req, res)=>{
   res.render('contact');
@@ -15,9 +18,6 @@ app.get('/dasboard', (req, res)=>{
   res.render('dasboard');
 });
 
-app.get('/', (req, res)=>{
-  res.render('index');
-});
 
 app.get('/produk', (req, res)=>{
   res.render('produk');
