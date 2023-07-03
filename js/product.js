@@ -1,9 +1,9 @@
 // PRIMARY KEY ID PRODUK
 let idProduk = '00';
 // VARIABEL UNTUK Menampilkan Card Confirm
-let confirm_SourceImg ;
-let confirm_namaProduk;
-let confirm_hargaProduk;
+  let confirm_SourceImg ;
+  let confirm_namaProduk;
+  let confirm_hargaProduk;
 
 // Tambah Produk
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,6 +89,7 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
 
   let container = document.getElementById('containers');
   container.appendChild(divCard);
+// ---------------------------------------------------------------------
 
   buttonAddToCart.addEventListener('click', function () {
 
@@ -109,37 +110,6 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
       existingItem.jumlah++;
       existingItem.hargaTotal = existingItem.jumlah * hargaProduk;
       document.getElementById('item-' + existingItem.id).textContent = `${existingItem.namaProduk} - ${existingItem.jumlah} barang - Rp ${existingItem.hargaTotal.toLocaleString('id-ID')}.00`;
-
-      // Mengisi variabel dari confirm card
-     confirm_SourceImg = sourceImg;
-     confirm_hargaProduk = hargaProduk;
-     confirm_namaProduk = existingItem.namaProduk;
-
-     console.log(confirm_SourceImg);
-     console.log(confirm_namaProduk);
-     console.log(confirm_hargaProduk);
-
-    //  let modalConfirm_btnClose = document.createElement("button");
-    //  let modalConfirm_btnFooterTambahKeranjang = document.createElement("button");
-    //  let modalConfirm_btnFooterBeli = document.createElement("button");
-
-    //  let modalConfirm_div_modalFade = document.createElement("div");
-    //  let modalConfirm_div_modalDialog = document.createElement("div");
-    //  let modalConfirm_div_modalContent = document.createElement("div");
-    //  let modalConfirm_div_modalHeader = document.createElement("div");
-    //  let modalConfirm_div_modalBody = document.createElement("div");
-    //  let modalConfirm_div_modalFooter = document.createElement("div");
-    //  let modalConfirm_div_modalFooter_containertxtcenter = document.createElement("div");
-    //  let modalConfirm_div_modalFooterRow = document.createElement("div");
-    //  let modalConfirm_h1_modalTitle = document.createElement("h1");
-     
-    //  let modalConfirmCardBody = document.createElement("div");
-    //  let modalConfirmCardBody_img = document.createElement("img");
-    //  let modalConfirmCardBody_h5 = document.createElement("h5");
-    //  let modalConfirmCardBody_p = document.createElement("p");
-
-    
-
 
 
     } else {
