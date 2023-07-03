@@ -28,7 +28,8 @@ app.get('/produk', (req, res)=>{
 
 app.get('/profile', (req, res)=>{
   res.render('profile');
-})
+});
+
 app.listen(port, ()=>{
   console.log(`Server Ready... http://localhost:${port}`);
 })
