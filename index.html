@@ -37,9 +37,6 @@
           <button type="button" class="tombol" id="btnLogin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
            Login
           </button>
-
-          <!-- <a href="/modal.html" class="btn" id="btn" target="_blank">Login</a>
-          <a href="./login.html" class="btn" id="btn" target="_blank" style="margin:0px 20px 0px 20px">Register</a> -->
         </div>
         <div>
           <img src="./assets/shoe.png" alt="Nike SuperRep Go" />
@@ -117,11 +114,11 @@
                   <h2 class="title">Login</h2>
                   <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="email" placeholder="Email" id="email_signin" />
+                    <input type="email" placeholder="Email" id="email_signin" required/>
                   </div>
                   <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" id="psw_signin" autocomplete="new-password" />
+                    <input type="password" placeholder="Password" id="psw_signin" autocomplete="new-password" required/>
                   </div>
                   <input type="submit" value="Login" id="signin-button" class="btn solid" />
                   <p class="social-text">Or Sign in with social platforms</p>
@@ -192,7 +189,7 @@
             </div>
 
           </div>
-          <script src="./js/app.js"></script>
+          <script src="./js/form.js"></script>
         </div>
       </div>
     </div>
