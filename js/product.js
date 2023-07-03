@@ -1,5 +1,9 @@
 // PRIMARY KEY ID PRODUK
 let idProduk = '00';
+// VARIABEL UNTUK Menampilkan Card Confirm
+  let confirm_SourceImg ;
+  let confirm_namaProduk;
+  let confirm_hargaProduk;
 
 // Tambah Produk
 document.addEventListener('DOMContentLoaded', function () {
@@ -70,6 +74,10 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
   imgCardImage.setAttribute('src', sourceImg);
   imgCardImage.setAttribute('alt', namaProduk);
 
+  buttonAddToCart.setAttribute('type','button');
+  buttonAddToCart.setAttribute('data-bs-toggle','modal');
+  buttonAddToCart.setAttribute('data-bs-target','#staticBackdrop');
+
   divCardOverlayContent.appendChild(p);
   divCardOverlayContent.appendChild(buttonAddToCart);
   divCardOverlay.appendChild(divCardOverlayContent);
@@ -81,11 +89,14 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
 
   let container = document.getElementById('containers');
   container.appendChild(divCard);
+// ---------------------------------------------------------------------
 
   buttonAddToCart.addEventListener('click', function () {
+
     let idCard = this.getAttribute('data-id');
     let namaProduk = document.getElementById('produk-' + idCard).querySelector('.card-title').textContent;
     let hargaProduk = document.getElementById('produk-' + idCard).querySelector('.card-price').textContent;
+    let sourceImg = document.getElementById('produk-' +idCard).querySelector('.card-image').getAttribute('src');
 
     hargaProduk = hargaProduk.replace('Harga: Rp ', '').replace(/\D/g, '');
     hargaProduk = parseFloat(hargaProduk);
@@ -99,8 +110,9 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
       existingItem.jumlah++;
       existingItem.hargaTotal = existingItem.jumlah * hargaProduk;
       document.getElementById('item-' + existingItem.id).textContent = `${existingItem.namaProduk} - ${existingItem.jumlah} barang - Rp ${existingItem.hargaTotal.toLocaleString('id-ID')}.00`;
-    } else {
 
+
+    } else {
       let idDetailTransaksi = cartItems.length + 1;
       let newCartItem = {
         id: idDetailTransaksi,
@@ -115,6 +127,29 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
       transactionItems.appendChild(detailTransaksi);
     }
 
+    
+
+    // Menampung jumlah barang
+    let totalBarang = 0;
+
+    let logoTotalBarang = 0;
+    // Proses Jumlah Barang semua id barang
+    cartItems.forEach((item) => {
+      totalBarang += item.jumlah;
+      logoTotalBarang += item.Jumlah;
+    });
+
+    if (totalBarang >= 100) {
+      logoTotalBarang = '99+';
+    } else {
+      logoTotalBarang = totalBarang;
+    }
+    // Menampilkan hasil total barang
+    let jumlahBarang = document.getElementById('jumlahbarang');
+    let tempatJumlahBarang = document.createElement('p');
+    jumlahBarang.textContent = logoTotalBarang;
+    jumlahBarang.appendChild(tempatJumlahBarang);
+
     let totalBayar = 0;
     cartItems.forEach((item) => {
       totalBayar += item.hargaTotal;
@@ -128,6 +163,9 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
     transactionTotal.textContent = `Total : Rp. ${totalBayar.toLocaleString('id-ID')}.00`;
   });
 
-  buttonAddToCart.setAttribute('data-id', idProduk);
+  buttonAddToCart.setAttribute('data-id', idProduk);
 }
 
+function confirmCard(){
+
+}

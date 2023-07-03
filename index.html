@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOKEKO SHOP</title>
     <link rel="icon" href="./assets/Logo/tokeko.png" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/product.css" />
     <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/profil.css" />
+    <link rel="stylesheet" href="/css/login.css">
   </head>
   <body>
-    <header>
 
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" ></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script> -->
+    <script src="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" ></script> -->
+    <script src="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+
+
+    <header>
+      <!-- Tampilan Navbar -->
       <nav>
         <div class="container" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 50px; margin-top: 5px">
           <div>
@@ -30,12 +40,6 @@
                 <li><a href="profile.html">Profil</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
-              <form>
-                <div class="search-icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <input type="text" name="search" id="search" placeholder="Search..." />
-              </form>
             </div>
           </div>
           <div class="menu-btn">
@@ -44,13 +48,18 @@
         </div>
       </nav>
 
+      <!-- Tampilan  main frame -->
       <div class="body">
         <div>
           <h1>Temukan Sepatu Impianmu dengan Mudah</h1>
-        
           <p>Satu Tempat, Banyak Peluang: Bergabunglah sebagai Mitra Penjual atau Temukan Sepatu Impianmu!</p>
-          <a href="./login.html" class="btn" id="btn" target="_blank">Login</a>
-          <a href="./login.html" class="btn" id="btn" target="_blank" style="margin:0px 20px 0px 20px">Register</a>
+          
+          <button type="button" class="tombol" id="btnLogin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+           Login
+          </button>
+
+          <!-- <a href="/modal.html" class="btn" id="btn" target="_blank">Login</a>
+          <a href="./login.html" class="btn" id="btn" target="_blank" style="margin:0px 20px 0px 20px">Register</a> -->
         </div>
         <div>
           <img src="./assets/shoe.png" alt="Nike SuperRep Go" />
@@ -68,13 +77,13 @@
               <i class="fas fa-play"></i>
             </div>
           </a>
-          
           <h3>Preview</h3>
         </div>
       </div>
+
     </header>
 
-    <!-- home -->
+    <!-- Tampilan animated display,ground main frame -->
     <div id="home">
       <div class="text-center">
         <div style="box-sizing: border-box">
@@ -109,10 +118,105 @@
       <br />
     </div>
 
-   
-      
-    </div>
+    <!-- FORM LOGIN & Register -->
+     
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">  
+          <!-- FORM -->
+          <div class="kontainer">
+            <!-- Form Login -->
+            <div class="forms-kontainer">
+              <div class="signin-signup">
+                <form action="#" class="sign-in-form" id="login">
+                  <h2 class="title">Login</h2>
+                  <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Email" id="email_signin" />
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="psw_signin" autocomplete="new-password" />
+                  </div>
+                  <input type="submit" value="Login" id="signin-button" class="btn solid" />
+                  <p class="social-text">Or Sign in with social platforms</p>
+                  <div class="social-media">
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-google"></i>
+                    </a>
+                  </div>
+                </form>
+                 <!-- FORM REGISTER -->
+                <form action="#" class="sign-up-form" id="register">
+                  <h2 class="title">Register</h2>
+                  <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name" id="name" />
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" placeholder="No HP" id="nohp" />
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="email_signup" />
+                  </div>
+                  <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="psw_signup" autocomplete="new-password" />
+                  </div>
+                  <input type="submit" class="btn" id="signup-button" value="Sign up" />
+                  <p class="social-text">Or Sign up with social platforms</p>
+                  <div class="social-media">
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                      <i class="fab fa-google"></i>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="panels-kontainer">
+              <div class="panel left-panel">
+                <div class="content">
+                  <h3>Belum Mendaftar ?</h3>
+                  <p>bergabunglah dengan kami segera !!</p>
+                  <button class="btn transparent" id="sign-up-btn">Register</button>
+                </div>
+                <img src="img/log.svg" class="images" alt="" />
+              </div>
+              <div class="panel right-panel">
+                <div class="content">
+                  <h3>Sudah mendaftar?</h3>
+                  <p>Jelajahi website kami dan temukan sepatu sepatu idaman anda!! atau jajakan sepatu terbaik anda disini </p>
+                  <button class="btn transparent" id="sign-in-btn">Login</button>
+                </div>
+                <img src="img/register.svg" class="images" alt="" />
+              </div>
+            </div>
 
+          </div>
+          <script src="./js/app.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Footer -->
     <div class="footer2">
       <footer>&copy; TOKEKO - 2023. Enjoy with your shoes :)</footer>
@@ -123,6 +227,4 @@
     <script src="./js/transaksi.js"></script>
     <script src="./js/index.js"></script> -->
   </body>
-
-   
 </html>
