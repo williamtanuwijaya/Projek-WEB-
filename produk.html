@@ -62,7 +62,8 @@
       <div class="transaction-container" id="transaksi" style="color: white">
         <h2>Transaksi</h2>
         <p>jumlah total sudah termasuk pajak 10%</p>
-        <div id="transaction-items" class="text-center"></div>
+        <div
+         id="transaction-items" class="text-center"></div>
         <div id="pajak" class="pajak">Pajak : Rp.0</div>
         <div id="transaction-total" class="transaction-total">Total : Rp.0</div>
         <br />
@@ -71,9 +72,49 @@
       <script src="./js/product.js"></script>
     </div>
 
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          
+              <img src="/assets/Adidas-Gazelle.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="container text-center">
+              <div class="row">
+                <button type="button" class="btn btn-primary col m-1" data-bs-toggle="modal" data-bs-target="#staticBackdrops" data-bs-dismiss="modal">
+                  Tambahkan ke Keranjang
+                </button>
+                <button type="button" class="btn btn-primary col m-1" data-bs-toggle="modal" data-bs-target="#staticBackdrops" data-bs-dismiss="modal">
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <!-- Footer -->
     <div class="footer2">
       <footer>&copy; TOKEKO - 2023. Enjoy with your shoes :)</footer>
     </div>
+
+
+
+
   </body>
 </html>
