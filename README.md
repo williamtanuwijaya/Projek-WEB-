@@ -21,6 +21,7 @@ Berikut adalah langkah-langkah untuk menjalankan TOKEKO di komputer Anda:
 Pastikan komputer Anda telah memenuhi persyaratan sistem berikut sebelum memulai:
 
 Node.js: Pastikan Anda telah menginstall Node.js di komputer Anda. Jika belum, Anda dapat mengunduhnya di situs resmi Node.js.
+
 2. Instalasi
 Untuk menjalankan TOKEKO, ikuti langkah-langkah berikut:
 
@@ -39,6 +40,7 @@ Instal dependensi: Jalankan perintah npm install untuk menginstal semua dependen
 bash
 Copy code
 npm install
+
 3. Menjalankan TOKEKO
 Setelah selesai menginstal dependensi, jalankan TOKEKO dengan langkah berikut:
 
