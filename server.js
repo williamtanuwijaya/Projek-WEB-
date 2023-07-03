@@ -14,6 +14,12 @@ app.get('/contact', (req, res)=>{
   res.render('contact');
 });
 
+
+app.get('/mega', (req, res)=>{
+  res.render('mega');
+});
+
+
 app.get('/dasboard', (req, res)=>{
   res.render('dasboard');
 });
