@@ -5,13 +5,6 @@ const kontainer = document.querySelector(".kontainer");
 const btnMenuLogin = document.getElementById("btnMenuLogin");
 const btnMenuRegister = document.getElementById("btnMenuRegister");
 const signup_button = document.getElementById("signup-button");
-var hostname = window.location.hostname; // Mendapatkan hostname dari URL saat ini
-
-// Mengganti "localhost" dengan teks yang diinginkan
-var newHostname = hostname.replace("localhost", "Teks Baru");
-
-// Menampilkan alert dengan teks yang telah diubah
-alert("Saat ini berada di: " + newHostname);
 
 let arrayInputName = [];
 let arrayInputEmail = [];
@@ -60,21 +53,37 @@ const form_register = document.getElementById('register').addEventListener('subm
     return ;
   }
 });
-//   if(inputName == '' || inputNoHp == '' || inputEmail == '' || inputPassword == '' ){
-//     event.preventDefault();
-//     console.log("ini if");
-//     console.log(inputName);
-//     console.log(inputNoHp);
-//     console.log(inputEmail);
-//     console.log(inputPassword);
-//   }else{
-//     kontainer.classList.remove("register-mode");
-//     console.log(inputName);
-//     console.log(inputNoHp);
-//     console.log(inputEmail);
-//     console.log(inputPassword);
-//   }
 
+const form_login = document.getElementById('login').addEventListener('submit',function(event){
+  let inputEmail = document.getElementById('email_signin').value;
+  let inputPassword = document.getElementById('psw_signin').value;
+  let i = arrayInputEmail.indexOf(inputEmail);
+
+  if(arrayInputEmail.indexOf(inputEmail) == -1){
+    if(inputEmail ==""){
+      alert("Email required.");
+      return;
+    }else {
+      alert("Email tidak ada.");
+      return;
+    }
+  }else if(arrayInputPassword[i] != inputPassword){
+    if(inputEmail ==""){
+      alert( "password required.");
+      return;
+    }
+      alert("password tidak sesuai.");
+      return;
+    
+  }else {
+    alert(inputEmail + " yor are login Now \n welcome to our website.");
+    window.location.href='/' 
+  }
+
+ document.getElementById('email_signup').value = "";
+ document.getElementById('psw_signup').value = "";
+
+});
 
 register_btn.addEventListener("click", () => {
   kontainer.classList.add("register-mode");
