@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <form action="" id="register">
+        <input type="text" name="nama" id="nama" class="nama" placeholder="nama">
+        <input type="submit" class="btn" id="signup-button" value="Sign up" />
+    </form>
+    <script >
+        const form_register = document.getElementById('register').addEventListener('submit',function(event){
+            let inputName = document.getElementById('nama').value;
+            let divtest = document.createElement('p');
+            let body = document.getElementById('body');
+            divtest.textContent = inputName;
+            body.appendChild(divtest);
+         
+        });
+    </script>
+</body>
+</html>
