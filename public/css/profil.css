@@ -32,7 +32,7 @@
 
 .deskripsi {
   font-size: 18px;
-  color: rgb(168, 167, 167);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -67,7 +67,7 @@
 }
 
 #profil {
-  background-color: black;
+  background-color: #4983de;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -76,7 +76,7 @@
 }
 
 .header {
-  background-color: #000000;
+  background-color: #4983de;
   width: 100%;
   padding: 20px;
   margin-top: 20px;
