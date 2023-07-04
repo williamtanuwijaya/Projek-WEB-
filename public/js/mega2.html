@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="mega.html">link</a>
+    <script> 
+        let arrayNama = [];
+        for(let i = 0 ; i < localStorage.length ; i++){
+            let nama= localStorage.getItem("nama-"+i);
+           arrayNama.push(nama);
+        }
+
+        for(let i = 0 ; i < localStorage.length ; i++){
+          console.log(arrayNama.pop());
+        }
+      
+    </script>
+</body>
+</html>

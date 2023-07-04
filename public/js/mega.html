@@ -6,12 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" id="form-test">
-        <input type="text" name="nama" id="nama" class="nama" pla>
-        <label for="nama">
-            
-        </label>
-        <input type="button" value="kirim">
+    <form onsubmit="myFunc(event)" id="form-test">
+        <input type="text" name="nama" id="nama" class="nama" placeholder="nama">
+        <input type="submit" value="kirim">
+        <a href="mega2.html">link</a>
+        <script type="text/javascript">
+            let i = 0;
+            function myFunc(event){
+                i++;
+                event.preventDefault();
+                var nama = document.getElementById("nama").value;
+                 localStorage.setItem('nama-'+i,nama);
+          
+    
+
+            }
+        </script>
     </form>
 </body>
 </html>
