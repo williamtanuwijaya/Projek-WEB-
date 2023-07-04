@@ -14,8 +14,15 @@
     <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css" />
     <link rel="stylesheet" href="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/profil.css" />
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/form.css">
   </head>
+  <style>
+    body {
+      background-image: url(https://example.com/path/to/image.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
   <body>
 
     
@@ -28,38 +35,18 @@
 
 
     <header>
-      <!-- Tampilan Navbar -->
-      <nav>
-        <div class="container" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 50px; margin-top: 5px">
-          <div>
-            <img src="./assets/Logo/tokeko.png" alt="logo" class="logo" />
-            <div class="menu">
-              <ul style="scroll-behavior: smooth">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="produk.html">Product</a></li>
-                <li><a href="profile.html">Profil</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="menu-btn">
-            <i class="fas fa-bars"></i>
-          </div>
-        </div>
-      </nav>
-
       <!-- Tampilan  main frame -->
       <div class="body">
         <div>
           <h1>Temukan Sepatu Impianmu dengan Mudah</h1>
           <p>Satu Tempat, Banyak Peluang: Bergabunglah sebagai Mitra Penjual atau Temukan Sepatu Impianmu!</p>
           
-          <button type="button" class="tombol" id="btnLogin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-           Login
+          <button type="button" class="tombol" id="btnMenuLogin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+           Login 
           </button>
-
-          <!-- <a href="/modal.html" class="btn" id="btn" target="_blank">Login</a>
-          <a href="./login.html" class="btn" id="btn" target="_blank" style="margin:0px 20px 0px 20px">Register</a> -->
+          <button type="button" class="tombol" id="btnMenuRegister" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+           Register
+           </button>
         </div>
         <div>
           <img src="./assets/shoe.png" alt="Nike SuperRep Go" />
@@ -133,15 +120,15 @@
             <!-- Form Login -->
             <div class="forms-kontainer">
               <div class="signin-signup">
-                <form action="#" class="sign-in-form" id="login">
+                <form action="#" class="login-form" id="login">
                   <h2 class="title">Login</h2>
                   <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="email" placeholder="Email" id="email_signin" />
+                    <input type="email" placeholder="Email" id="email_signin" required/>
                   </div>
                   <div class="input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" id="psw_signin" autocomplete="new-password" />
+                    <input type="password" placeholder="Password" id="psw_signin" autocomplete="new-password" required/>
                   </div>
                   <input type="submit" value="Login" id="signin-button" class="btn solid" />
                   <p class="social-text">Or Sign in with social platforms</p>
@@ -158,7 +145,7 @@
                   </div>
                 </form>
                  <!-- FORM REGISTER -->
-                <form action="#" class="sign-up-form" id="register">
+                <form action="#" class="register-form" id="register">
                   <h2 class="title">Register</h2>
                   <div class="input-field">
                     <i class="fas fa-user"></i>
@@ -170,7 +157,7 @@
                   </div>
                   <div class="input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" id="email_signup" />
+                    <input type="text" placeholder="Email" id="email_signup" />
                   </div>
                   <div class="input-field">
                     <i class="fas fa-lock"></i>
@@ -197,7 +184,7 @@
                 <div class="content">
                   <h3>Belum Mendaftar ?</h3>
                   <p>bergabunglah dengan kami segera !!</p>
-                  <button class="btn transparent" id="sign-up-btn">Register</button>
+                  <button class="btn transparent" id="register-btn">Register</button>
                 </div>
                 <img src="img/log.svg" class="images" alt="" />
               </div>
@@ -205,14 +192,15 @@
                 <div class="content">
                   <h3>Sudah mendaftar?</h3>
                   <p>Jelajahi website kami dan temukan sepatu sepatu idaman anda!! atau jajakan sepatu terbaik anda disini </p>
-                  <button class="btn transparent" id="sign-in-btn">Login</button>
+                  <button class="btn transparent" id="login-btn">Login</button>
                 </div>
+
                 <img src="img/register.svg" class="images" alt="" />
               </div>
             </div>
 
           </div>
-          <script src="./js/app.js"></script>
+          <script src="./js/form.js"></script>
         </div>
       </div>
     </div>
@@ -226,5 +214,6 @@
     <script src="./js/script.js"></script>
     <script src="./js/transaksi.js"></script>
     <script src="./js/index.js"></script> -->
+    <script src="/js/validasi.js"></script>
   </body>
 </html>
