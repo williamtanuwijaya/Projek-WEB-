@@ -1,5 +1,5 @@
 #daftar-profil {
-  margin-top: 20%;
+  margin-top: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -24,13 +24,14 @@
 }
 
 .nama {
+  color: white;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .deskripsi {
   font-size: 18px;
-  color: gray;
+  color: rgb(168, 167, 167);
   margin-bottom: 20px;
 }
 
@@ -46,7 +47,7 @@
 }
 
 .sosial-media a {
-  color: #333;
+  color: #ffffff;
   font-size: 20px;
   transition: color 0.3s;
 }
