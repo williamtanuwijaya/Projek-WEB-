@@ -6,34 +6,26 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/contact', (req, res)=>{
+app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
-
-app.get('/mega', (req, res)=>{
-  res.render('mega');
-});
-
-
-app.get('/dasboard', (req, res)=>{
+app.get('/dasboard', (req, res) => {
   res.render('dasboard');
 });
 
-
-app.get('/produk', (req, res)=>{
+app.get('/produk', (req, res) => {
   res.render('produk');
 });
 
-app.get('/profile', (req, res)=>{
+app.get('/profile', (req, res) => {
   res.render('profile');
 });
 
-app.listen(port, ()=>{
+app.listen(port, () => {
   console.log(`Server Ready... http://localhost:${port}`);
-})
-
+});
