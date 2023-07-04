@@ -1,3 +1,13 @@
+// import fs from 'fs';
+
+// const konten = "hello\n";
+// fs.appendFile("file.txt",konten,err => {
+//     if(err){
+//         console.err;
+//         return;
+//     }
+// });
+let i = 0;
 const login_btn = document.querySelector('#login-btn');
 const register_btn = document.querySelector('#register-btn');
 const kontainer = document.querySelector('.kontainer');
@@ -9,6 +19,13 @@ let arrayInputName = [];
 let arrayInputEmail = [];
 let arrayInputNoHp = [];
 let arrayInputPassword = [];
+
+for(let j = 0 ; j < localStorage.length ; j++){
+  arrayInputEmail.push(localStorage.getItem("email-"+j));
+  arrayInputName.push(localStorage.getItem("nama-"+j));
+  arrayInputNoHp.push(localStorage.getItem("noHp-"+j));
+  arrayInputPassword.push(localStorage.getItem("password-"+j));
+}
 
 // Jika belum mengisi semua kolom di register
 const form_register = document.getElementById('register').addEventListener('submit', function (event) {
@@ -28,11 +45,16 @@ const form_register = document.getElementById('register').addEventListener('subm
     kontainer.classList.add('register-mode');
     return;
   }
+  i++;
+  localStorage.setItem("nama-"+i,inputName);
+  localStorage.setItem("email-"+i,inputEmail);
+  localStorage.setItem("noHp-"+i,inputNoHp);
+  localStorage.setItem("password-"+i,inputPassword);
 
-  arrayInputEmail.push(inputEmail);
-  arrayInputName.push(inputName);
-  arrayInputNoHp.push(inputNoHp);
-  arrayInputPassword.push(inputPassword);
+  // arrayInputEmail.push(inputEmail);
+  // arrayInputName.push(inputName);
+  // arrayInputNoHp.push(inputNoHp);
+  // arrayInputPassword.push(inputPassword);
 
   document.getElementById('name').value = '';
   document.getElementById('nohp').value = '';
@@ -62,6 +84,7 @@ const form_login = document.getElementById('login').addEventListener('submit', f
   } else {
     alert('Email not found.');
     window.location.href = '/';
+    return;
   }
 
   document.getElementById('email_signin').value = '';

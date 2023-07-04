@@ -38,7 +38,6 @@
         background-size: 100% 100%;
         background-attachment: fixed;
       }
-      
     </style>
   </head>
   <body>
@@ -55,13 +54,13 @@
               <li><a href="/contact">Contact</a></li>
             </ul>
             <form>
-              <button class="nav-btn">
-                <i class="fas fa-cart-plus"></i>
-                <div class="notification">
+              <div style="background-color: rgba(215, 207, 207, 0.5); width: 50px; height: 50px; border-radius: 50%">
+                <i class="fas fa-cart-plus" style="width: 10px; height: 10px; margin-top: 15px; margin-left: 13px"></i>
+                <div class="notification" style="margin-right: 45px">
                   <!-- JUMLAH BARANG DI KERANJANG JIKA DIKLIK TAMBAHKAN KERANJANG -->
                   <p id="jumlahbarang">0</p>
                 </div>
-              </button>
+              </div>
             </form>
           </div>
         </div>
@@ -72,7 +71,7 @@
     </nav>
 
     <!-- Product -->
-    <div id="Product" >
+    <div id="Product">
       <br />
       <h2 class="text-center" style="color: white; margin: 20px 0px 0px 0px">Our Product</h2>
       <br />
@@ -92,39 +91,6 @@
       <!-- JAVASCRIPT UNTUK MEMBUAT CARD PRODUCT DAN MELAKUKAN KALKULASI PERHITUNGAN -->
       <script src="/js/product.js"></script>
     </div>
-
-    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-          
-               <<img src="..." class="card-img-top" alt="..." id="confirm_imgCard">
-              <div class="card-body">
-                <h5 class="card-title" id="confirm_titleCard">...</h5>
-                <p class="card-text" id="confirm_hargaCard">...</p>        
-            </div>
-          </div>
-          <div class="modal-footer">
-            <div class="container text-center">
-              <div class="row">
-                <button type="button" class="btn btn-primary col m-1" data-bs-toggle="modal" data-bs-target="#staticBackdrops" data-bs-dismiss="modal">
-                  Tambahkan ke Keranjang
-                </button>
-                <button type="button" class="btn btn-primary col m-1" data-bs-toggle="modal" data-bs-target="#staticBackdrops" data-bs-dismiss="modal">
-                  Beli Sekarang
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-body d-flex align-items-center justify-content-center">

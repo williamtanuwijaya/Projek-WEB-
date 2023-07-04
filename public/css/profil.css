@@ -1,13 +1,19 @@
 #daftar-profil {
-  margin-top: 20%;
+  margin-top: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .profil {
   text-align: center;
   margin: 20px;
+  transition: transform 0.3s;
+}
+
+.profil:hover {
+  transform: scale(1.1);
 }
 
 .foto-profil {
@@ -16,22 +22,19 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  transition: transform 0.3s;
-}
-
-.foto-profil:hover {
-  transform: scale(1.1);
 }
 
 .nama {
+  color: white;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .deskripsi {
   font-size: 18px;
-  color: gray;
+  color: rgb(168, 167, 167);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .sosial-media {
@@ -46,7 +49,7 @@
 }
 
 .sosial-media a {
-  color: #333;
+  color: #ffffff;
   font-size: 20px;
   transition: color 0.3s;
 }
@@ -61,4 +64,76 @@
 
 .linkedin a:hover {
   color: #0A66C2;
+}
+
+#profil {
+  background-color: black;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header {
+  background-color: #000000;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.header h3 {
+  color: #fff;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+  transition: transform 0.3s;
+}
+
+#sepatupajang:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.contact {
+  margin-top: 3000px;
+  padding-top: 10px;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #profil {
+    padding: 10px;
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
