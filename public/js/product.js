@@ -165,7 +165,3 @@ function tambahProduk(sourceImg, namaProduk, hargaProduk) {
 
   buttonAddToCart.setAttribute('data-id', idProduk);
 }
-
-function confirmCard(){
-
-}
