@@ -58,7 +58,7 @@ const form_login = document.getElementById('login').addEventListener('submit', f
     }
 
     alert(inputEmail + ' you are logged in. \nWelcome to our website.');
-    window.location.href = '/dashboard';
+    window.location.href = '/dasboard';
   } else {
     alert('Email not found.');
     window.location.href = '/';
