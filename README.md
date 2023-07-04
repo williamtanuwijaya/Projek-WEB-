@@ -1,5 +1,6 @@
 # TOKEKO - Toko Sepatu Nike
 ![TOKEKO Logo](./public/assets/Logo/tokeko.png)
+
 Selamat datang di repositori TOKEKO! Ini adalah proyek website toko sepatu Nike yang dibuat oleh tim Pemrograman Web 1 di Universitas Multi Data Palembang. Kami dengan antusiasme ingin mempersembahkan kepada Anda pengalaman berbelanja sepatu Nike yang menyenangkan dan mudah.
 
 ## Tim Pengembang
