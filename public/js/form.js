@@ -1,12 +1,3 @@
-// import fs from 'fs';
-
-// const konten = "hello\n";
-// fs.appendFile("file.txt",konten,err => {
-//     if(err){
-//         console.err;
-//         return;
-//     }
-// });
 let i = 0;
 const login_btn = document.querySelector('#login-btn');
 const register_btn = document.querySelector('#register-btn');
@@ -50,11 +41,6 @@ const form_register = document.getElementById('register').addEventListener('subm
   localStorage.setItem("email-"+i,inputEmail);
   localStorage.setItem("noHp-"+i,inputNoHp);
   localStorage.setItem("password-"+i,inputPassword);
-
-  // arrayInputEmail.push(inputEmail);
-  // arrayInputName.push(inputName);
-  // arrayInputNoHp.push(inputNoHp);
-  // arrayInputPassword.push(inputPassword);
 
   document.getElementById('name').value = '';
   document.getElementById('nohp').value = '';
