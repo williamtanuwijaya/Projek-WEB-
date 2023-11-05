@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOKEKO SHOP</title>
+    <link rel="icon" href="./public/assets/Logo/tokeko.png" />
+    <link rel="stylesheet" href="./public/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css/footer.css" />
+    <link rel="stylesheet" href="./public/css/home.css" />
+    <link rel="stylesheet" href="./public/fontawesome-free-6.4.0-web/css/all.css" />
+    <link rel="stylesheet" href="./public/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/css/profil.css" />
+    <link rel="stylesheet" href="./public/css/form.css" />
+  </head>
+  <body>
+    <script src="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+    <script src="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+
+    <header>
+      <!-- Tampilan  main frame -->
+      <div class="body">
+        <div>
+          <h1>Temukan Sepatu Impianmu dengan Mudah</h1>
+          <p>Satu Tempat, Banyak Peluang: Bergabunglah sebagai Mitra Penjual atau Temukan Sepatu Impianmu!</p>
+
+          <button type="button" class="tombol" id="btnMenuLogin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
+          <button type="button" class="tombol" id="btnMenuRegister" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</button>
+        </div>
+        <div>
+          <img src="./public/assets/shoe.png" alt="Nike SuperRep Go" id="sepatupajang"/>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="watch">
+          <a href="https://www.youtube.com/watch?v=AmrN7zDQxCs" target="_blank">
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </a>
+          <h3>Preview</h3>
+        </div>
+      </div>
+    </header>
+
+    <!-- Tampilan animated display,ground main frame -->
+    <div id="home">
+      <div class="text-center">
+        <div style="box-sizing: border-box">
+          <div class="image-slideshow">
+            <div class="image fade">
+              <img src="./public/assets/Nike Pegasus 40.jpg" alt="Adidaas-NMD-R1" id="foto" />
+            </div>
+            <div class="image fade">
+              <img src="./public/assets/Air Jordan 1 Zoom CMFT 2.jpg" alt="Air Jordan 1 Zoom CMFT 2" id="foto" />
+            </div>
+            <div class="image fade">
+              <img src="./public/assets/Nike Air Force 1 '07.jpg" alt="Nike Air Force 1 '07" id="foto" />
+            </div>
+            <div class="image fade">
+              <img src="./public/assets/Nike Tanjun Racer Lifestyle Shoes.jpg" alt="Nike Tanjun Racer Lifestyle Shoes" id="foto" />
+            </div>
+            <script src="./public/js/home.js"></script>
+          </div>
+        </div>
+        <div>
+          <br />
+          <br />
+          <h2>Welcome to TOKEKO</h2>
+          <p style="color: black;">
+            Selamat datang di toko sepatu TOKEKO - Tempat terbaik untuk menemukan gaya dan kenyamanan dalam setiap langkah.
+            Temukan koleksi sepatu terbaru dan tren terkini hanya di toko sepatu kami.
+            Kami menghadirkan berbagai merek terkenal dalam satu tempat yaitu NIKE - pastikan Anda selalu berada di depan mode dengan sepatu terbaru kami.
+            Dengan pengalaman belanja yang mudah dan aman, kami berkomitmen untuk memberikan kepuasan pelanggan yang tak tertandingi.
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <!-- FORM LOGIN & Register -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- FORM -->
+            <div class="kontainer">
+              <!-- Form Login -->
+              <div class="forms-kontainer">
+                <div class="signin-signup">
+                  <form action="./views/dasboard.html" class="login-form" id="login">
+                    <h2 class="title">Login</h2>
+                    <div class="input-field">
+                      <i class="fas fa-user"></i>
+                      <input type="email" placeholder="Email" id="email_signin"/>
+                    </div>
+                    <div class="input-field">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" id="psw_signin" autocomplete="new-password"  />
+                    </div>
+                    <input type="submit" value="Login" id="signin-button" class="btn solid"  onclick='window.location.href="/dasboard "'/>
+                    <p class="social-text">Or Sign in with social platforms</p>
+                    <div class="social-media">
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                      </a>
+                    </div>
+                  </form>
+                  <!-- FORM REGISTER -->
+                  <form action="#" class="register-form" id="register">
+                    <h2 class="title">Register</h2>
+                    <div class="input-field">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Name" id="name" />
+                    </div>
+                    <div class="input-field">
+                      <i class="fas fa-phone"></i>
+                      <input type="text" placeholder="No HP" id="nohp" />
+                    </div>
+                    <div class="input-field">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Email" id="email_signup" />
+                    </div>
+                    <div class="input-field">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" id="psw_signup" autocomplete="new-password" />
+                    </div>
+                    <input type="submit" class="btn" id="signup-button" value="Sign up" />
+                    <p class="social-text">Or Sign up with social platforms</p>
+                    <div class="social-media">
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="panels-kontainer">
+                <div class="panel left-panel">
+                  <div class="content">
+                    <h3>Belum Mendaftar ?</h3>
+                    <p>bergabunglah dengan kami segera !!</p>
+                    <button class="btn transparent" id="register-btn">Register</button>
+                  </div>
+                  <img src="img/log.svg" class="images" alt="" />
+                </div>
+                <div class="panel right-panel">
+                  <div class="content">
+                    <h3>Sudah mendaftar?</h3>
+                    <p>Jelajahi website kami dan temukan sepatu sepatu idaman anda!! atau jajakan sepatu terbaik anda disini</p>
+                    <button class="btn transparent" id="login-btn">Login</button>
+                  </div>
+                  <img src="img/register.svg" class="images" alt="" />
+                </div>
+              </div>
+            </div>
+            <script src="./public/js/form.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer2">
+      <footer>&copy; TOKEKO - 2023. Enjoy with your shoes :)</footer>
+    </div>
+  </body>
+</html>
