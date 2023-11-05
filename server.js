@@ -4,11 +4,11 @@ const port = 8000;
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
-  // res.render('index');
-  res.send("halo")
+  res.render('index');
+  // res.send("halo")
 });
 
 app.get('/contact', (req, res) => {
