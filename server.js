@@ -7,7 +7,8 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  // res.render('index');
+  res.send("halo")
 });
 
 app.get('/contact', (req, res) => {
