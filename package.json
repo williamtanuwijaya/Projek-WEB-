@@ -5,8 +5,7 @@
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "start": "nodemon server.js",
-    "vercel-build": "echo hello"
+    "start": "nodemon server.js"
   },
   "name": "projekweb1",
   "version": "1.0.0",
